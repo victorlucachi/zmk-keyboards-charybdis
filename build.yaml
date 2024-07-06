@@ -24,7 +24,7 @@ include:
     shield: charybdis_left
   - board: nice_nano_v2
     shield: charybdis_right
-#  - board: seeeduino_xiao_ble
-#    shield: settings_reset
-#  - board: nice_nano_v2
-#    shield: settings_reset
+  - board: nice_nano_v2
+    shield: settings_reset
+  - board: seeeduino_xiao_ble
+    shield: settings_reset
