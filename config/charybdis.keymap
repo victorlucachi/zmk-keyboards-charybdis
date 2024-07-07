@@ -23,7 +23,6 @@
 &caps_word { continue-list = <NB_UNDERSCORE NB_MINUS WNB_UNDERSCORE WNB_MINUS BACKSPACE DEL>; };
 
 
-/ {
     trackball_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
