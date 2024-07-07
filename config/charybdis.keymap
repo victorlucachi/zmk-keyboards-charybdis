@@ -24,15 +24,6 @@
 
 &caps_word { continue-list = <NB_UNDERSCORE NB_MINUS WNB_UNDERSCORE WNB_MINUS BACKSPACE DEL>; };
 
-#define Base 0
-#define Media 1
-#define Nav 2
-#define Mouse 3
-#define Sym 4
-#define Num 5
-#define Fun 6
-#define Button 7
-
 / {
     trackball_listener {
         compatible = "zmk,input-behavior-listener";
