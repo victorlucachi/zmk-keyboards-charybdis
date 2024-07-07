@@ -64,9 +64,9 @@
         input-code = <INPUT_REL_WHEEL>;
     };
 
-/ {
-    chosen { zmk,matrix_transform = &five_column_transform; };
-};
+    chosen {
+        zmk,matrix_transform = &five_column_transform;
+    };
 
    / {
     combos {
