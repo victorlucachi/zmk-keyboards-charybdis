@@ -20,6 +20,8 @@
     // tapping-term-ms
 
 #define TT 160
+&caps_word { continue-list = <NB_UNDERSCORE NB_MINUS WNB_UNDERSCORE WNB_MINUS BACKSPACE DEL>; };
+
 
 / {
     trackball_listener {
@@ -61,8 +63,6 @@
         evt-type = <INPUT_EV_REL>;
         input-code = <INPUT_REL_WHEEL>;
     };
-
-&caps_word { continue-list = <NB_UNDERSCORE NB_MINUS WNB_UNDERSCORE WNB_MINUS BACKSPACE DEL>; };
 
 / {
     chosen { zmk,matrix_transform = &five_column_transform; };
