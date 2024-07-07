@@ -18,11 +18,12 @@
 #define SCRL 9
 #define BIRO 10
 
-// tapping-term-ms
-
-#define TT 160
 
 &caps_word { continue-list = <NB_UNDERSCORE NB_MINUS WNB_UNDERSCORE WNB_MINUS BACKSPACE DEL>; };
+
+/ {
+    chosen { zmk,matrix_transform = &five_column_transform; };
+};
 
 / {
     trackball_listener {
@@ -64,10 +65,6 @@
         evt-type = <INPUT_EV_REL>;
         input-code = <INPUT_REL_WHEEL>;
     };
-
-    / {
-    chosen { zmk,matrix_transform = &five_column_transform; };
-};
 
 / {
     combos {
@@ -255,26 +252,6 @@
             label = "HMR";
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32 34 33>;
             hold-trigger-on-release;
-        };
-
-        hmpt: homerow_mods_prefer_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS_PREFER_TAP";
-            #binding-cells = <2>;
-            tapping-term-ms = <TT>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
-
-        blt: balanced_layer_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "BALANCED_LAYER_TAP";
-            #binding-cells = <2>;
-            tapping-term-ms = <TT>;
-            quick-tap-ms = <0>;
-            flavor = "balanced";
-            bindings = <&mo>, <&kp>;
         };
 
         tt: toggle_layer_tap {
