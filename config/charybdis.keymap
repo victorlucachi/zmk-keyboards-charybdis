@@ -66,165 +66,6 @@
         input-code = <INPUT_REL_WHEEL>;
     };
 
-/ {
-    combos {
-        compatible = "zmk,combos";
-
-        combo_ques {
-            timeout-ms = <35>;
-            key-positions = <7 6>;
-            bindings = <&ques_excl>;
-        };
-
-        aa {
-            timeout-ms = <35>;
-            bindings = <&kp LEFT_BRACKET>;
-            key-positions = <26 27>;
-        };
-
-        ae {
-            timeout-ms = <35>;
-            bindings = <&kp APOS>;
-            key-positions = <3 2>;
-        };
-
-        oe {
-            timeout-ms = <35>;
-            bindings = <&kp SEMI>;
-            key-positions = <23 22>;
-        };
-
-        combo_rpara {
-            bindings = <&par_square_r>;
-            key-positions = <27 28>;
-        };
-        combo_para {
-            bindings = <&paras>;
-            key-positions = <7 8>;
-        };
-
-        combo-lcurl {
-            bindings = <&curl_great_l>;
-            key-positions = <2 1>;
-            layers = <0>;
-        };
-
-        combo_rcurl {
-            bindings = <&curl_less_r>;
-            key-positions = <22 21>;
-            layers = <0>;
-        };
-
-        combo_at {
-            bindings = <&kp NB_AT>;
-            key-positions = <2 7>;
-            layers = <0>;
-        };
-
-        caps_word_combo {
-            bindings = <&caps_word>;
-            key-positions = <11 18>;
-        };
-
-        amp_combo {
-            bindings = <&kp NB_AMPS>;
-            key-positions = <13 16>;
-        };
-
-        grave_combo {
-            bindings = <&kp NB_GRAVE>;
-            key-positions = <1 8>;
-        };
-
-        dollar_combo {
-            bindings = <&kp NB_DLLR>;
-            key-positions = <12 17>;
-            layers = <0>;
-        };
-
-        percent_combo {
-            bindings = <&kp NB_PRCNT>;
-            key-positions = <16 7>;
-        };
-
-        hash_combo {
-            bindings = <&kp NB_HASH>;
-            key-positions = <23 26>;
-        };
-
-        win_curl_l {
-            bindings = <&kp WNB_LBRC>;
-            key-positions = <2 1>;
-            layers = <1>;
-        };
-
-        win_curl_r {
-            bindings = <&kp WNB_RBRC>;
-            key-positions = <22 21>;
-            layers = <1>;
-        };
-
-        win_at {
-            bindings = <&kp WNB_AT>;
-            key-positions = <2 7>;
-            layers = <1>;
-        };
-
-        pipe_mac {
-            bindings = <&kp NB_PIPE>;
-            key-positions = <7 17>;
-            layers = <0>;
-        };
-
-        pipe_win {
-            bindings = <&kp WNB_PIPE>;
-            key-positions = <7 17>;
-            layers = <1>;
-        };
-
-        bslh_mac {
-            bindings = <&kp NB_BSLH>;
-            key-positions = <8 18>; 
-            layers = <0>;
-        };
-
-        bslh_win {
-            bindings = <&kp WNB_BSLH>;
-            key-positions = <8 18>;
-            layers = <1>;
-        };
-
-        fslh_combo {
-            bindings = <&kp NB_FSLH>;
-            key-positions = <6 16>;
-            //global
-        };
-
-        dollar_win {
-            bindings = <&kp WNB_DLLR>;
-            key-positions = <12 17>;
-            layers = <1>;
-        };
-
-        pnd_mac {
-            bindings = <&kp NB_POUND_SIGN>;
-            key-positions = <3 6>;
-            layers = <0>;
-        };
-
-        pnd_win {
-            bindings = <&kp WNB_POUND_SIGN>;
-            key-positions = <3 6>;
-            layers = <1>;
-        };
-
-        win_def {
-            bindings = <&tog 1>;
-            key-positions = <30 33>;
-        };
-    };
-};
-
     
 / {
     behaviors {
@@ -378,12 +219,6 @@
         compatible = "zmk,keymap";
 
         default {
-            // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            //  '    |  ,  |  .  |  P/Nav  |  Y  |                             |  F/Fn  |  G  |  C/Caps  |    R    |  L   |
-            // A/Sym |  O/Ctrl  |  E/Alt [A->F13]? |  U/Cmd  |  I  |           |  D  |  H/Cmd  |  T/Alt  |    N/Ctrl    |  S/Sym |
-            // Esc/Lsft|  Q/Click  |  J  |  K  |  X  |                               |  B  |  M  |  N  |    V    |Z/Rsft|
-            // | Media/Play-Pause | Bspc/LC | SPC/Num/RC |                                                       | Ent | Tab |     |
-
             bindings = <
   &kp Q        &kp W        &kp F         &kp P               &kp B         &kp J    &kp L               &kp U         &kp Y        &apos_dqt
   &hml LGUI A  &hml LALT R  &hml LCTRL S  &hml LSHFT T        &kp G         &kp M    &hmr RIGHT_SHIFT N  &hmr RCTRL E  &hmr LALT I  &hmr RGUI O
@@ -394,12 +229,6 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
         win {
-            // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            //  '    |  ,  |  .  |  P/Nav  |  Y  |                             |  F/Fn  |  G  |  C/Caps  |    R    |  L   |
-            // A/Sym |  O/Ctrl  |  E/Alt [A->F13]? |  U/Cmd  |  I  |           |  D  |  H/Cmd  |  T/Alt  |    N/Ctrl    |  S/Sym |
-            // Esc/Lsft|  Q/Click  |  J  |  K  |  X  |                               |  B  |  M  |  N  |    V    |Z/Rsft|
-            // | Media/Play-Pause | Bspc/LC | SPC/Num/RC |                                                       | Ent | Tab |     |
-
             bindings = <
   &kp Q        &kp W        &kp F         &kp P               &kp B         &kp J    &kp L               &kp U         &kp Y        &apos_dqt_win
   &hml LGUI A  &hml LALT R  &hml LCTRL S  &hml LSHFT T        &kp G         &kp M    &hmr RIGHT_SHIFT N  &hmr RCTRL E  &hmr LALT I  &hmr RGUI O
@@ -411,12 +240,6 @@
         };
 
         symbols {
-            // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            //  !  |  @  |  {  |  }  |     |                |         |    <    |    >   |  *  |   #  |
-            //  ^  |  $  |  (  |  )  |  \  |                |    &    |    =    |    -   |  :  |   ;  |
-            //  ~  |  `  |  [  |  ]  |     |                |         |    +    |    _   |  %  |   ?  |
-            //         |  ,,  | |/&  | //\ |                |    "    |    `    |   ,,   |
-
             bindings = <
   &kp EXCL   &hml LS(LCTRL) AT  &hmpt LS(LALT) LBRC  &hml LS(LCMD) RBRC  &none                  &none     &hml RS(RCMD) LT  &hmpt RS(LALT) GT  &hml RS(RCTRL) ASTERISK  &hml LA(N3) HASH
   &kp CARET  &hml LCTRL DOLLAR  &hmpt LALT LPAR      &hml LCMD RPAR      &kp BACKSLASH          &kp AMPS  &hml RCMD EQL     &hmpt LALT MINUS   &hml RCTRL COLON         &kp SEMICOLON
@@ -428,12 +251,6 @@
         };
 
         numbers {
-            // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            //   s-f5  |  s-f6  |  s-f7 |  s-f8  |   |            |         |    4/<    |    5/>   |  6/*  |   7//  |
-            //    s-f1   |  s-f2 |  s-f3 | s-f4 |   |             |   DEL   |    0/=    |    1/-   | 2/: |   3/;  |
-            //     s-f9   | s-f10 | s-f11 | s-f12 |   |           |         |    8/+    |    9/_   | +/- | *//  |
-            //         |      |     |      |     |      |    .    |    =    |      |
-
             bindings = <
   &kp LS(F5)        &kp LS(F6)   &kp LS(F7)    &kp LS(F8)   &none    &kp NB_BSLH  &kp N7  &kp N8  &kp N9  &kp NB_STAR
   &kp LEFT_CONTROL  &kp LALT     &kp LEFT_GUI  &kp LSHIFT   &none    &kp NB_FSLH  &kp N4  &kp N5  &kp N6  &kp NB_EQUAL
@@ -443,12 +260,6 @@
         };
 
         nav {
-            // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            //     |     |     |     |     |                |         |         |    ^   |     |      |
-            //     |     |     |     |     |                |         |    <    |    v   |  >  |      |
-            //     |     |     |     |     |                |         |   HOME  |        | END |      |
-            //         |      |     |      |     |      |    PgDN   |   PgUP  |      |
-
             bindings = <
   &none     &bt BT_SEL 0  &bt BT_PRV  &bt BT_NXT  &none     &none  &none            &kp UP     &none     &none
   &kp LEFT  &kp DOWN      &kp UP      &kp RIGHT   &tog 4    &none  &kp RIGHT_SHIFT  &kp LCTRL  &kp RALT  &kp LGUI
@@ -460,11 +271,6 @@
         };
 
         fn {
-            // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            //  F5 |  F6 | F7  | F8  |     |                |         |         |        |     |      |
-            //  F1 |  F2 | F3  | F4  | DEL |                |         |         |        |     |      |
-            //  F9 | F10 | F11 | F12 |     |                |   ,,    |   ,,    |        |     |      |
-            //         |      |     |      |     |      |           |         |      |
 
             bindings = <
   &kp F5    &kp F6    &kp F7     &kp F8      &none      &none  &kp F7  &kp F8  &kp F9  &kp F12
@@ -477,12 +283,6 @@
         };
 
         bt {
-            // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            //     |     |     |     |     |                |         |         |        |     |      |
-            //     |     |     |     |     |                |   P0    |    P1   |   P2   |  P3 |  P4  |
-            //     |     |     |     |     |                | BT/USB  |         |        |     |      |
-            //         | CLR  |     |      |
-
             bindings = <
   &none  &none  &none  &none       &none    &none         &none         &none         &none         &none
   &none  &none  &none  &none       &none    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
