@@ -17,11 +17,21 @@
 #define CLICK 8
 #define SCRL 9
 #define BIRO 10
-    // tapping-term-ms
+
+// tapping-term-ms
 
 #define TT 160
+
 &caps_word { continue-list = <NB_UNDERSCORE NB_MINUS WNB_UNDERSCORE WNB_MINUS BACKSPACE DEL>; };
 
+#define Base 0
+#define Media 1
+#define Nav 2
+#define Mouse 3
+#define Sym 4
+#define Num 5
+#define Fun 6
+#define Button 7
 
 / {
     trackball_listener {
@@ -64,10 +74,11 @@
         input-code = <INPUT_REL_WHEEL>;
     };
 
-    chosen {
-        zmk,matrix_transform = &five_column_transform;
-    };
+    / {
+    chosen { zmk,matrix_transform = &five_column_transform; };
+};
 
+/ {
     combos {
         compatible = "zmk,combos";
 
@@ -226,7 +237,8 @@
     };
 };
 
- {
+    
+/ {
     behaviors {
         hml: hml {
             compatible = "zmk,behavior-hold-tap";
@@ -347,8 +359,8 @@
         };
         paras: paras {
             compatible = "zmk,behavior-mod-morph";
-            label = "PARAS";
-            bindings = <&kp NB_LPAR>, <&kp NB_RPAR>;
+            label = "PARAS"
+            bindings = <&kp NB_LPAR>, <&kp NB_RPAR>
         }
         par_square_r: par_square_r {
             compatible = "zmk,behavior-mod-morph";
