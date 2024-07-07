@@ -297,6 +297,14 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&tog>;
         };
+                blt: balanced_layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <160>;
+            quick-tap-ms = <0>;
+            flavor = "balanced";
+            bindings = <&mo>, <&kp>;
+        };
 
         repeat_encoder: repeat_encoder {
             compatible = "zmk,behavior-sensor-rotate";
