@@ -262,7 +262,7 @@
         evt-type = <INPUT_EV_REL>;
         input-code = <INPUT_REL_WHEEL>;
     };
-/ {
+    
     behaviors {
         hml: hml {
             compatible = "zmk,behavior-hold-tap";
