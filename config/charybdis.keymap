@@ -18,15 +18,6 @@
 #define SCRL 9
 #define BIRO 10
 
-#define Base 0
-#define Media 1
-#define Nav 2
-#define Mouse 3
-#define Sym 4
-#define Num 5
-#define Fun 6
-#define Button 7
-
 / {
     trackball_listener {
         compatible = "zmk,input-behavior-listener";
