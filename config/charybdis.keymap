@@ -17,6 +17,9 @@
 #define CLICK 8
 #define SCRL 9
 #define BIRO 10
+    // tapping-term-ms
+
+#define TT 160
 
 / {
     trackball_listener {
@@ -58,10 +61,6 @@
         evt-type = <INPUT_EV_REL>;
         input-code = <INPUT_REL_WHEEL>;
     };
-
-    // tapping-term-ms
-
-#define TT 160
 
 &caps_word { continue-list = <NB_UNDERSCORE NB_MINUS WNB_UNDERSCORE WNB_MINUS BACKSPACE DEL>; };
 
