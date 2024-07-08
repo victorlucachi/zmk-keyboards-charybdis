@@ -21,6 +21,10 @@
 		;
 };
 
+&left_encoder {
+    status = "okay";
+};
+
 / {
 	vtrackball: virtual_input_trackball {
 		compatible = "zmk,virtual-input";
