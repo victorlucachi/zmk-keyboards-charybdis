@@ -1,11 +1,9 @@
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/ext_power.h>
-#include <dt-bindings/zmk/mouse.h>
-#include <dt-bindings/zmk/outputs.h>
 #include "keys_nb_osx.h"
 #include "keys_nb_win.h"
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
 
 #define WIN 1
 #define SYMBOLS 2
@@ -18,12 +16,12 @@
 #define SCRL 9
 #define BIRO 10
 
-
 &caps_word { continue-list = <NB_UNDERSCORE NB_MINUS WNB_UNDERSCORE WNB_MINUS BACKSPACE DEL>; };
 
 / {
     chosen { zmk,matrix_transform = &five_column_transform; };
 };
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -235,7 +233,7 @@
     };
 
     trackball_snipe_listener {
-        compatible = "zmk,input-behavior-listener";   
+        compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
         layers = <7>;
         evt-type = <INPUT_EV_REL>;
@@ -249,7 +247,7 @@
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
         layers = <9>;
-        evt-type = <INPUT_EV_REL>;            
+        evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_MISC>;
         y-input-code = <INPUT_REL_WHEEL>;
         y-invert;
@@ -262,11 +260,11 @@
         evt-type = <INPUT_EV_REL>;
         input-code = <INPUT_REL_WHEEL>;
     };
-    
+
     behaviors {
         hml: hml {
             compatible = "zmk,behavior-hold-tap";
-             #binding-cells = <2>;
+            #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;                // repeat on tap-into-hold
@@ -279,7 +277,7 @@
 
         hmr: hmr {
             compatible = "zmk,behavior-hold-tap";
-             #binding-cells = <2>;
+            #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;                // repeat on tap-into-hold
@@ -297,7 +295,8 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&tog>;
         };
-                blt: balanced_layer_tap {
+
+        blt: balanced_layer_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <160>;
@@ -437,6 +436,15 @@
         };
     };
 
+    macros {
+        new_macro: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bootloader &kp N &kp E &kp I &kp O &kp O &kp I &kp E &kp N>;
+            label = "NEW_MACRO";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -499,9 +507,9 @@
             //         |      |     |      |     |      |    PgDN   |   PgUP  |      |
 
             bindings = <
-  &none     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none     &none  &none            &kp UP     &kp C_POWER  &none
+  &none     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none     &none  &none            &kp UP     &kp C_SLEEP  &none
   &kp LEFT  &kp DOWN      &kp UP        &kp RIGHT     &tog 3    &none  &kp RIGHT_SHIFT  &kp LCTRL  &kp RALT     &kp LGUI
-  &kp HOME  &kp PG_DN     &kp PG_UP     &kp END       &none     &none  &kp HOME         &none      &kp END      &none
+  &kp HOME  &kp PG_DN     &kp PG_UP     &kp END       &none     &none  &kp HOME         &none      &kp END      &kp C_RESET
                                         &trans        &trans    &none  &none
             >;
 
