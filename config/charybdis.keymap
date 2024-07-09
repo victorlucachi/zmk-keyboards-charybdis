@@ -217,6 +217,11 @@
             bindings = <&kp ESCAPE>;
             key-positions = <33 32>;
         };
+
+        boot_loader {
+            bindings = <&bootloader>;
+            key-positions = <29 19>;
+        };
     };
 };
 
@@ -440,7 +445,8 @@
         new_macro: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bootloader &kp N &kp E &kp I &kp O &kp O &kp I &kp E &kp N>;
+            bindings = <&bootloader>, <&macro_press>;
+
             label = "NEW_MACRO";
         };
     };
@@ -509,7 +515,7 @@
             bindings = <
   &none     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none     &none  &none            &kp UP     &kp C_SLEEP  &none
   &kp LEFT  &kp DOWN      &kp UP        &kp RIGHT     &tog 3    &none  &kp RIGHT_SHIFT  &kp LCTRL  &kp RALT     &kp LGUI
-  &kp HOME  &kp PG_DN     &kp PG_UP     &kp END       &none     &none  &kp HOME         &none      &kp END      &kp C_RESET
+  &kp HOME  &kp PG_DN     &kp PG_UP     &kp END       &none     &none  &kp HOME         &none      &kp END      &new_macro
                                         &trans        &trans    &none  &none
             >;
 
