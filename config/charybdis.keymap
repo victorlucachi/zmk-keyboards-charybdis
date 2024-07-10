@@ -255,7 +255,6 @@
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_MISC>;
         y-input-code = <INPUT_REL_WHEEL>;
-        y-invert;
         scale-divisor = <10>;
         bindings = <&ib_wheel_scaler 1 8>;
     };
