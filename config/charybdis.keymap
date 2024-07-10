@@ -229,12 +229,12 @@
     trackball_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
-        layers = <0>;
+        layers = <0, 1>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
         scale-multiplier = <1>;
-        scale-divisor = <6>;
+        scale-divisor = <4>;
     };
 
     trackball_snipe_listener {
@@ -256,7 +256,7 @@
         x-input-code = <INPUT_REL_MISC>;
         y-input-code = <INPUT_REL_WHEEL>;
         y-invert;
-        bindings = <&ib_wheel_scaler 1 8>;
+        bindings = <&ib_wheel_scaler 1 14>;
     };
 
     ib_wheel_scaler: ib_wheel_scaler {
@@ -513,7 +513,7 @@
             //         |      |     |      |     |      |    PgDN   |   PgUP  |      |
 
             bindings = <
-  &none     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none     &none  &none            &kp UP     &kp C_SLEEP  &none
+  &none     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none     &none  &none            &kp K_POWER     &kp C_POWER  &none
   &kp LEFT  &kp DOWN      &kp UP        &kp RIGHT     &tog 3    &none  &kp RIGHT_SHIFT  &kp LCTRL  &kp RALT     &kp LGUI
   &kp HOME  &kp PG_DN     &kp PG_UP     &kp END       &none     &none  &kp HOME         &none      &kp END      &new_macro
                                         &trans        &trans    &none  &none
