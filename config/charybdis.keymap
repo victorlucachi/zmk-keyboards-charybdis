@@ -250,7 +250,7 @@
     trackball_snipe_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
-        layers = <7>;
+        layers = <4>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
@@ -266,7 +266,7 @@
         x-input-code = <INPUT_REL_MISC>;
         y-input-code = <INPUT_REL_WHEEL>;
         y-invert;
-        scale-divisor = <16>;
+        scale-divisor = <12>;
         bindings = <&ib_wheel_scaler 1 8>;
     };
 
