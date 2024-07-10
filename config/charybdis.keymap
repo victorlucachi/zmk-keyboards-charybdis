@@ -267,7 +267,7 @@
         y-input-code = <INPUT_REL_WHEEL>;
         y-invert;
         scale-divisor = <16>;
-        bindings = <&ib_wheel_scaler 1 20>;
+        bindings = <&ib_wheel_scaler 1 8>;
     };
 
     ib_wheel_scaler: ib_wheel_scaler {
