@@ -376,6 +376,8 @@
             bindings = <&mo>, <&sk>;
 
             tapping-term-ms = <200>;
+            flavor = "hold-preferred";
+            quick-tap-ms = <100>;
         };
 
         lt_spcesc: layer_tap_space_esc {
@@ -509,9 +511,9 @@
             // | Media/Play-Pause | Bspc/LC | SPC/Num/RC |                                                       | Ent | Tab |     |
 
             bindings = <
-  &kp Q        &kp W        &kp F         &kp P           &kp B         &kp J        &kp L               &kp U         &kp Y        &apos_dqt_win
-  &hml LGUI A  &hml LALT R  &hml LCTRL S  &hml LSHFT T    &kp G         &kp M        &hmr RIGHT_SHIFT N  &hmr RCTRL E  &hmr LALT I  &hmr RGUI O
-  &lt 8 Z      &kp X        &kp C         &kp D           &kp V         &kp K        &kp H               &kp COMMA     &kp DOT      &kp NB_MINUS
+  &kp Q        &kp W        &kp F         &kp P           &kp B               &kp J        &kp L                  &kp U         &kp Y        &apos_dqt_win
+  &hml LGUI A  &hml LALT R  &hml LCTRL S  &hml LSHFT T    &kp G               &kp M        &hmr RIGHT_SHIFT N     &hmr RCTRL E  &hmr LALT I  &hmr RGUI O
+  &lt 8 Z      &kp X        &kp C         &kp D           &kp V               &kp K        &kp H                  &kp COMMA     &kp DOT      &kp NB_MINUS
                                           &lt_spcesc 3 0  &blt 5 BACKSPACE    &lt 7 ENTER  &shift_layer 4 LSHIFT
             >;
 
@@ -526,10 +528,10 @@
             //         |      |     |      |     |      |    .    |    =    |      |
 
             bindings = <
-  &kp LS(F5)    &kp LS(F6)   &kp LS(F7)   &kp LS(F8)   &none     &kp NB_BSLH  &kp N7  &kp N8  &kp N9  &kp NB_STAR
-  &kp LEFT_GUI  &kp LALT     &kp LCTRL    &kp LSHIFT   &tog 4    &kp NB_FSLH  &kp N4  &kp N5  &kp N6  &kp NB_EQUAL
-  &kp LS(F9)    &kp LS(F10)  &kp LS(F11)  &kp LS(F12)  &none     &kp NB_PIPE  &kp N1  &kp N2  &kp N3  &kp NB_PLUS
-                                          &none        &none     &kp DOT      &kp N0
+  &kp LS(F5)    &kp LG(LC(Q))  &kp LS(F7)   &kp LS(F8)   &none     &kp NB_BSLH  &kp N7  &kp N8  &kp N9  &kp NB_STAR
+  &kp LEFT_GUI  &kp LALT       &kp LCTRL    &kp LSHIFT   &tog 4    &kp NB_FSLH  &kp N4  &kp N5  &kp N6  &kp NB_EQUAL
+  &kp LS(F9)    &kp LS(F10)    &kp LS(F11)  &kp LS(F12)  &none     &kp NB_PIPE  &kp N1  &kp N2  &kp N3  &kp NB_PLUS
+                                            &none        &none     &kp DOT      &kp N0
             >;
 
             sensor-bindings = <&inc_dec_kp F3 LS(F3)>;
@@ -537,7 +539,7 @@
 
         num_win {
             bindings = <
-  &kp LS(F5)    &kp LS(F6)   &kp LS(F7)   &kp LS(F8)   &none     &kp WNB_BSLH  &kp N7  &kp N8  &kp N9  &kp WNB_STAR
+  &kp LS(F5)    &kp LG(L)    &kp LS(F7)   &kp LS(F8)   &none     &kp WNB_BSLH  &kp N7  &kp N8  &kp N9  &kp WNB_STAR
   &kp LEFT_GUI  &kp LALT     &kp LCTRL    &kp LSHIFT   &tog 4    &kp WNB_FSLH  &kp N4  &kp N5  &kp N6  &kp WNB_EQUAL
   &kp LS(F9)    &kp LS(F10)  &kp LS(F11)  &kp LS(F12)  &none     &kp WNB_PIPE  &kp N1  &kp N2  &kp N3  &kp WNB_PLUS
                                           &none        &none     &kp DOT       &kp N0
@@ -554,10 +556,10 @@
             //         |      |     |      |     |      |    PgDN   |   PgUP  |      |
 
             bindings = <
-  &none     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none     &none  &none            &kp C_SLEEP  &kp C_POWER  &none
-  &kp LEFT  &kp DOWN      &kp UP        &kp RIGHT     &tog 4    &none  &kp RIGHT_SHIFT  &kp LCTRL    &kp LALT     &kp LGUI
-  &kp HOME  &kp PG_DN     &kp PG_UP     &kp END       &none     &none  &kp HOME         &none        &kp END      &new_macro
-                                        &trans        &trans    &none  &none
+  &none     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none      &none  &none            &kp C_SLEEP  &kp C_POWER  &none
+  &kp LEFT  &kp DOWN      &kp UP        &kp RIGHT     &tog 4     &none  &kp RIGHT_SHIFT  &kp LCTRL    &kp LALT     &kp LGUI
+  &kp HOME  &kp PG_DN     &kp PG_UP     &kp END       &none      &none  &kp HOME         &none        &kp END      &new_macro
+                                        &kp ESC       &kp TAB    &none  &none
             >;
 
             sensor-bindings = <&inc_dec_kp F3 LS(F3)>;
