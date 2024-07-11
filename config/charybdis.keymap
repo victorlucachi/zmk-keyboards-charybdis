@@ -369,6 +369,7 @@
 
             tapping-term-ms = <200>;
         };
+
         shift_layer: shift_layer {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -491,11 +492,12 @@
 
         default {
             bindings = <
-  &kp Q        &kp W        &kp F         &kp P           &kp B               &kp J        &kp L               &kp U         &kp Y        &apos_dqt
-  &hml LGUI A  &hml LALT R  &hml LCTRL S  &hml LSHFT T    &kp G               &kp M        &hmr RIGHT_SHIFT N  &hmr RCTRL E  &hmr LALT I  &hmr RGUI O
-  &lt 8 Z      &kp X        &kp C         &kp D           &kp V               &kp K        &kp H               &kp COMMA     &kp DOT      &kp NB_MINUS
+  &kp Q        &kp W        &kp F         &kp P           &kp B               &kp J        &kp L                  &kp U         &kp Y        &apos_dqt
+  &hml LGUI A  &hml LALT R  &hml LCTRL S  &hml LSHFT T    &kp G               &kp M        &hmr RIGHT_SHIFT N     &hmr RCTRL E  &hmr LALT I  &hmr RGUI O
+  &lt 8 Z      &kp X        &kp C         &kp D           &kp V               &kp K        &kp H                  &kp COMMA     &kp DOT      &kp NB_MINUS
                                           &lt_spcesc 2 0  &blt 5 BACKSPACE    &lt 6 ENTER  &shift_layer 4 LSHIFT
             >;
+
             sensor-bindings = <&inc_dec_kp TAB LS(TAB)>;
         };
 
@@ -507,9 +509,9 @@
             // | Media/Play-Pause | Bspc/LC | SPC/Num/RC |                                                       | Ent | Tab |     |
 
             bindings = <
-  &kp Q        &kp W        &kp F         &kp P           &kp B         &kp J        &kp L               &kp U         &kp Y        &apos_dqt_win
-  &hml LGUI A  &hml LALT R  &hml LCTRL S  &hml LSHFT T    &kp G         &kp M        &hmr RIGHT_SHIFT N  &hmr RCTRL E  &hmr LALT I  &hmr RGUI O
-  &lt 8 Z      &kp X        &kp C         &kp D           &kp V         &kp K        &kp H               &kp COMMA     &kp DOT      &kp NB_MINUS
+  &kp Q        &kp W        &kp F         &kp P           &kp B         &kp J        &kp L                  &kp U         &kp Y        &apos_dqt_win
+  &hml LGUI A  &hml LALT R  &hml LCTRL S  &hml LSHFT T    &kp G         &kp M        &hmr RIGHT_SHIFT N     &hmr RCTRL E  &hmr LALT I  &hmr RGUI O
+  &lt 8 Z      &kp X        &kp C         &kp D           &kp V         &kp K        &kp H                  &kp COMMA     &kp DOT      &kp NB_MINUS
                                           &lt_spcesc 3 0  &blt 5 TAB    &lt 7 ENTER  &shift_layer 4 LSHIFT
             >;
 
@@ -538,7 +540,7 @@
   &kp LS(F5)    &kp LS(F6)   &kp LS(F7)   &kp LS(F8)   &none     &kp WNB_BSLH  &kp N7  &kp N8  &kp N9  &kp WNB_STAR
   &kp LEFT_GUI  &kp LALT     &kp LCTRL    &kp LSHIFT   &tog 4    &kp WNB_FSLH  &kp N4  &kp N5  &kp N6  &kp WNB_EQUAL
   &kp LS(F9)    &kp LS(F10)  &kp LS(F11)  &kp LS(F12)  &none     &kp WNB_PIPE  &kp N1  &kp N2  &kp N3  &kp WNB_PLUS
-                                          &none        &none     &kp DOT      &kp N0
+                                          &none        &none     &kp DOT       &kp N0
             >;
 
             sensor-bindings = <&inc_dec_kp F3 LS(F3)>;
@@ -552,7 +554,7 @@
             //         |      |     |      |     |      |    PgDN   |   PgUP  |      |
 
             bindings = <
-  &none     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none     &none  &none            &kp K_POWER  &kp C_POWER  &none
+  &none     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none     &none  &none            &kp C_SLEEP  &kp C_POWER  &none
   &kp LEFT  &kp DOWN      &kp UP        &kp RIGHT     &tog 4    &none  &kp RIGHT_SHIFT  &kp LCTRL    &kp LALT     &kp LGUI
   &kp HOME  &kp PG_DN     &kp PG_UP     &kp END       &none     &none  &kp HOME         &none        &kp END      &new_macro
                                         &trans        &trans    &none  &none
@@ -602,10 +604,10 @@
 
         mouse {
             bindings = <
-  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans  &trans
-  &trans  &mo 10  &trans  &trans     &trans       &trans  &trans  &trans  &mo 10  &trans
-                          &mkp LCLK  &mkp RCLK    &trans  &trans
+  &trans  &trans  &trans  &trans     &trans       &trans     &trans     &trans  &trans  &trans
+  &trans  &trans  &trans  &trans     &trans       &trans     &trans     &trans  &trans  &trans
+  &trans  &mo 10  &trans  &trans     &trans       &trans     &trans     &trans  &mo 10  &trans
+                          &mkp LCLK  &mkp RCLK    &mkp RCLK  &mkp LCLK
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PLUS) LC(MINUS)>;
