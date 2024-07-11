@@ -490,17 +490,11 @@
         compatible = "zmk,keymap";
 
         default {
-            // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            //  '    |  ,  |  .  |  P/Nav  |  Y  |                             |  F/Fn  |  G  |  C/Caps  |    R    |  L   |
-            // A/Sym |  O/Ctrl  |  E/Alt [A->F13]? |  U/Cmd  |  I  |           |  D  |  H/Cmd  |  T/Alt  |    N/Ctrl    |  S/Sym |
-            // Esc/Lsft|  Q/Click  |  J  |  K  |  X  |                               |  B  |  M  |  N  |    V    |Z/Rsft|
-            // | Media/Play-Pause | Bspc/LC | SPC/Num/RC |                                                       | Ent | Tab |     |
-
             bindings = <
   &kp Q        &kp W        &kp F         &kp P           &kp B               &kp J        &kp L               &kp U         &kp Y        &apos_dqt
   &hml LGUI A  &hml LALT R  &hml LCTRL S  &hml LSHFT T    &kp G               &kp M        &hmr RIGHT_SHIFT N  &hmr RCTRL E  &hmr LALT I  &hmr RGUI O
   &lt 8 Z      &kp X        &kp C         &kp D           &kp V               &kp K        &kp H               &kp COMMA     &kp DOT      &kp NB_MINUS
-                                          &lt_spcesc 2 0  &blt 5 BACKSPACE    &lt 6 ENTER  &shift_layer 4 SHIFT
+                                          &lt_spcesc 2 0  &blt 5 BACKSPACE    &lt 6 ENTER  &shift_layer 4 LSHIFT
             >;
             sensor-bindings = <&inc_dec_kp TAB LS(TAB)>;
         };
@@ -516,7 +510,7 @@
   &kp Q        &kp W        &kp F         &kp P           &kp B         &kp J        &kp L               &kp U         &kp Y        &apos_dqt_win
   &hml LGUI A  &hml LALT R  &hml LCTRL S  &hml LSHFT T    &kp G         &kp M        &hmr RIGHT_SHIFT N  &hmr RCTRL E  &hmr LALT I  &hmr RGUI O
   &lt 8 Z      &kp X        &kp C         &kp D           &kp V         &kp K        &kp H               &kp COMMA     &kp DOT      &kp NB_MINUS
-                                          &lt_spcesc 3 0  &blt 5 TAB    &lt 7 ENTER  &shift_layer 4 SHIFT
+                                          &lt_spcesc 3 0  &blt 5 TAB    &lt 7 ENTER  &shift_layer 4 LSHIFT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
