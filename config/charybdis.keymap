@@ -260,7 +260,7 @@
     trackball_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
-        layers = <0 1 7>;
+        layers = <0 1 2 4 5 6 7 8 9>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
@@ -282,7 +282,7 @@
     trackball_scroll_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
-        layers = <9>;
+        layers = <10>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_MISC>;
         y-input-code = <INPUT_REL_WHEEL>;
@@ -535,9 +535,9 @@
 
         num_win {
             bindings = <
-  &kp LS(F5)    &kp LS(F6)   &kp LS(F7)   &kp LS(F8)   &none     &kp NB_BSLH  &kp N7  &kp N8  &kp N9  &kp NB_STAR
-  &kp LEFT_GUI  &kp LALT     &kp LCTRL    &kp LSHIFT   &tog 4    &kp NB_FSLH  &kp N4  &kp N5  &kp N6  &kp NB_EQUAL
-  &kp LS(F9)    &kp LS(F10)  &kp LS(F11)  &kp LS(F12)  &none     &kp NB_PIPE  &kp N1  &kp N2  &kp N3  &kp NB_PLUS
+  &kp LS(F5)    &kp LS(F6)   &kp LS(F7)   &kp LS(F8)   &none     &kp WNB_BSLH  &kp N7  &kp N8  &kp N9  &kp WNB_STAR
+  &kp LEFT_GUI  &kp LALT     &kp LCTRL    &kp LSHIFT   &tog 4    &kp WNB_FSLH  &kp N4  &kp N5  &kp N6  &kp WNB_EQUAL
+  &kp LS(F9)    &kp LS(F10)  &kp LS(F11)  &kp LS(F12)  &none     &kp WNB_PIPE  &kp N1  &kp N2  &kp N3  &kp WNB_PLUS
                                           &none        &none     &kp DOT      &kp N0
             >;
 
