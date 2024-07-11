@@ -53,13 +53,13 @@
         combo_paras {
             timeout-ms = <35>;
             bindings = <&paras>;
-            key-positions = <7 8>;
+            key-positions = <27 28>;
         };
 
         combo_squares {
             timeout-ms = <35>;
             bindings = <&squares>;
-            key-positions = <27 28>;
+            key-positions = <7 8>; 
         };
 
         combo-curles {
@@ -287,7 +287,7 @@
         x-input-code = <INPUT_REL_HWHEEL>;
         y-input-code = <INPUT_REL_WHEEL>;
         scale-divisor = <10>;
-        bindings = <&ib_wheel_scaler 1 8>;
+        bindings = <&ib_wheel_scaler 1 4>;
     };
 
     ib_wheel_scaler: ib_wheel_scaler {
