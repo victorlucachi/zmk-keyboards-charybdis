@@ -324,6 +324,13 @@
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32 34 33>;
             hold-trigger-on-release;
         };
+        lsscw: layer_sticky_shift_caps_word {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&sscw>;
+        };
 
         tt: toggle_layer_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -405,6 +412,13 @@
             #binding-cells = <0>;
             bindings = <&kp WNB_APOS>, <&kp WNB_DQT>;
 
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        sscw: sticky_shift_caps_word {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&sk LSHIFT>, <&caps_word>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -501,36 +515,25 @@
   &kp Q        &kp W        &kp F         &kp P           &kp B               &kp J        &kp L                  &kp U         &kp Y        &apos_dqt
   &hml LGUI A  &hml LALT R  &hml LCTRL S  &hml LSHFT T    &kp G               &kp M        &hmr RIGHT_SHIFT N     &hmr RCTRL E  &hmr LALT I  &hmr RGUI O
   &lt 8 Z      &kp X        &kp C         &kp D           &kp V               &kp K        &kp H                  &kp COMMA     &kp DOT      &kp NB_MINUS
-                                          &lt_spcesc 2 0  &blt 5 BACKSPACE    &lt 6 ENTER  &shift_layer 4 LSHIFT
+                                          &lt_spcesc 2 0  &blt 5 BACKSPACE    &lt 6 ENTER  &lsscw 3 0
             >;
 
             sensor-bindings = <&inc_dec_kp TAB LS(TAB)>;
         };
 
         win {
-            // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            //  '    |  ,  |  .  |  P/Nav  |  Y  |                             |  F/Fn  |  G  |  C/Caps  |    R    |  L   |
-            // A/Sym |  O/Ctrl  |  E/Alt [A->F13]? |  U/Cmd  |  I  |           |  D  |  H/Cmd  |  T/Alt  |    N/Ctrl    |  S/Sym |
-            // Esc/Lsft|  Q/Click  |  J  |  K  |  X  |                               |  B  |  M  |  N  |    V    |Z/Rsft|
-            // | Media/Play-Pause | Bspc/LC | SPC/Num/RC |                                                       | Ent | Tab |     |
 
             bindings = <
   &kp Q        &kp W        &kp F         &kp P           &kp B               &kp J        &kp L                  &kp U         &kp Y        &apos_dqt_win
   &hml LGUI A  &hml LALT R  &hml LCTRL S  &hml LSHFT T    &kp G               &kp M        &hmr RIGHT_SHIFT N     &hmr RCTRL E  &hmr LALT I  &hmr RGUI O
   &lt 8 Z      &kp X        &kp C         &kp D           &kp V               &kp K        &kp H                  &kp COMMA     &kp DOT      &kp NB_MINUS
-                                          &lt_spcesc 3 0  &blt 5 BACKSPACE    &lt 7 ENTER  &shift_layer 4 LSHIFT
+                                          &lt_spcesc 3 0  &blt 5 BACKSPACE    &lt 7 ENTER  &lsscw 4 0
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         numbers {
-            // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            //   s-f5  |  s-f6  |  s-f7 |  s-f8  |   |            |         |    4/<    |    5/>   |  6/*  |   7//  |
-            //    s-f1   |  s-f2 |  s-f3 | s-f4 |   |             |   DEL   |    0/=    |    1/-   | 2/: |   3/;  |
-            //     s-f9   | s-f10 | s-f11 | s-f12 |   |           |         |    8/+    |    9/_   | +/- | *//  |
-            //         |      |     |      |     |      |    .    |    =    |      |
-
             bindings = <
   &kp LS(F5)    &kp LG(LC(Q))  &kp LS(F7)   &kp LS(F8)   &none     &kp NB_BSLH  &kp N7  &kp N8  &kp N9  &kp NB_STAR
   &kp LEFT_GUI  &kp LALT       &kp LCTRL    &kp LSHIFT   &tog 4    &kp NB_FSLH  &kp N4  &kp N5  &kp N6  &kp NB_EQUAL
