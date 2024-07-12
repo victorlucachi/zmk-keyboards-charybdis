@@ -17,7 +17,11 @@
 #define BIRO 10
 
 &caps_word { continue-list = <NB_UNDERSCORE NB_MINUS WNB_UNDERSCORE WNB_MINUS BACKSPACE DEL>; };
-
+// Change sticky key defaults
+&sk {
+    release-after-ms = <2000>;
+    quick-release;
+};
 / {
     chosen { zmk,matrix_transform = &five_column_transform; };
 };
