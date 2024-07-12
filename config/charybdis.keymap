@@ -246,9 +246,9 @@
             key-positions = <30 31>;
         };
 
-        thumb_esct2 {
-            timeout-ms = <35>;
-            bindings = <&kp ESCAPE>;
+        thumb_bspc {
+            timeout-ms = <50>;
+            bindings = <&back_del>;
             key-positions = <33 32>;
         };
 
@@ -515,7 +515,7 @@
   &kp Q        &kp W        &kp F         &kp P           &kp B               &kp J        &kp L                  &kp U         &kp Y        &apos_dqt
   &hml LGUI A  &hml LALT R  &hml LCTRL S  &hml LSHFT T    &kp G               &kp M        &hmr RIGHT_SHIFT N     &hmr RCTRL E  &hmr LALT I  &hmr RGUI O
   &lt 8 Z      &kp X        &kp C         &kp D           &kp V               &kp K        &kp H                  &kp COMMA     &kp DOT      &kp NB_MINUS
-                                          &lt_spcesc 2 0  &blt 5 BACKSPACE    &lt 6 ENTER  &lsscw 3 0
+                                          &lt_spcesc 2 0  &blt 5 BACKSPACE    &lt 6 ENTER  &lsscw 4 0
             >;
 
             sensor-bindings = <&inc_dec_kp TAB LS(TAB)>;
