@@ -21,12 +21,24 @@
 		;
 };
 
-&left_encoder {
+&spi0 {
+    status = "okay";
+};
+
+&trackball2 {
     status = "okay";
 };
 
 / {
 	vtrackball: virtual_input_trackball {
 		compatible = "zmk,virtual-input";
+	};
+	vtrackball2: virtual_input_trackball {
+		compatible = "zmk,virtual-input";
+	};
+	input_relay_config_trackball {
+		compatible = "zmk,split-peripheral-input-relay";
+		device = <&trackball2>;
+		relay-channel = <103>;
 	};
 };
