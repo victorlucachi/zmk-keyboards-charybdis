@@ -38,7 +38,7 @@
 	};
 	input_relay_config_trackball {
 		compatible = "zmk,split-peripheral-input-relay";
-		device = <&trackb ll2>;
+		device = <&trackball2>;
 		relay-channel = <103>;
 	};
 };
