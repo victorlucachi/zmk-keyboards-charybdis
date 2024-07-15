@@ -19,7 +19,7 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: charybdis_dongle
+    shield: charybdis_dongle dongle_display
   - board: nice_nano_v2
     shield: charybdis_left
   - board: nice_nano_v2
