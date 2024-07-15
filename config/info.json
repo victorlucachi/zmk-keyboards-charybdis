@@ -44,15 +44,5 @@
           { "label": "RSE", "row": 3, "col": 8, "x": 10.52, "y": 3.13, "r": -15, "rx": 11.02, "ry": 7.63 }
         ]
       }
-    },
-    "sensors": [
-      {
-        "ref": "left_encoder",
-        "name": "encoder_left",
-        "identifier": "encoder_left",
-        "compatible": "alps,ec11",
-        "label": "LEFT_ENCODER",
-        "enabled": false
-      }
-    ]
+    }
   }

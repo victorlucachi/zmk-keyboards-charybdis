@@ -602,7 +602,6 @@
                                           &lt_spcesc 2 0      &blt 5 TAB    &lt 6 ENTER  &lt_bspc 4 0
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP LS(C_VOLUME_DOWN)>;
         };
 
         win {
@@ -613,7 +612,6 @@
                                           &lt_spcesc 3 0  &blt 5 TAB    &lt 7 ENTER  &lt_bspc 4 0
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         numbers {
@@ -624,7 +622,6 @@
                                             &none        &none     &kp DOT      &kp N0
             >;
 
-            sensor-bindings = <&inc_dec_kp F3 LS(F3)>;
         };
 
         num_win {
@@ -635,16 +632,9 @@
                                           &none        &none     &kp DOT       &kp N0
             >;
 
-            sensor-bindings = <&inc_dec_kp F3 LS(F3)>;
         };
 
         nav {
-            // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            //     |     |     |     |     |                |         |         |    ^   |     |      |
-            //     |     |     |     |     |                |         |    <    |    v   |  >  |      |
-            //     |     |     |     |     |                |         |   HOME  |        | END |      |
-            //         |      |     |      |     |      |    PgDN   |   PgUP  |      |
-
             bindings = <
   &none     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none      &none  &none            &kp C_SLEEP  &kp C_POWER  &none
   &kp LEFT  &kp DOWN      &kp UP        &kp RIGHT     &tog 4     &none  &kp RIGHT_SHIFT  &kp LCTRL    &kp LALT     &kp LGUI
@@ -652,7 +642,6 @@
                                         &kp ESC       &kp TAB    &none  &none
             >;
 
-            sensor-bindings = <&inc_dec_kp F3 LS(F3)>;
         };
 
         fn {
@@ -663,7 +652,6 @@
                                  &none       &none      &none  &none
             >;
 
-            sensor-bindings = <&inc_dec_kp C_BRI_DEC C_BRI_INC>;
         };
 
         sym_mac {
@@ -674,7 +662,6 @@
                                    &trans        &trans    &trans  &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         sym_win {
@@ -685,7 +672,6 @@
                                      &trans         &trans    &trans  &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp F3 RS(F3)>;
         };
 
         mouse {
@@ -696,7 +682,6 @@
                                           &mkp LCLK       &mkp RCLK    &mkp RCLK  &mkp LCLK
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(PLUS) LC(MINUS)>;
         };
 
         click {
