@@ -335,6 +335,15 @@
         y-input-code = <INPUT_REL_WHEEL>;
         bindings = <&ib_wheel_scaler 1 25>;
     };
+    trackball_scroll_listener2 {
+        compatible = "zmk,input-behavior-listener";
+        device = <&vtrackball2>;
+        layers = <10>;
+        evt-type = <INPUT_EV_REL>;
+        x-input-code = <INPUT_REL_MISC>;
+        y-input-code = <INPUT_REL_WHEEL>;
+        bindings = <&ib_wheel_scaler 1 25>;
+    };
 
     ib_wheel_scaler: ib_wheel_scaler {
         compatible = "zmk,input-behavior-scaler";
@@ -589,7 +598,7 @@
             bindings = <
   &kp Q        &kp W        &kp F         &kp P               &kp B         &kp J        &kp L                     &kp U         &kp Y        &apos_dqt
   &hml LGUI A  &hml LALT R  &hml LCTRL S  &hml_shift LSHFT T  &kp G         &kp M        &hml_shift RIGHT_SHIFT N  &hmr RCTRL E  &hmr LALT I  &hmr RGUI O
-  &lt 8 Z      &kp X        &kp C         &kp D               &kp V         &kp K        &kp H                     &kp COMMA     &kp DOT      &kp NB_MINUS
+  &lt 8 Z      &kp X        &kp C         &kp D               &kp V         &kp K        &kp H                     &kp COMMA     &kp DOT      &lt 8 NB_MINUS
                                           &lt_spcesc 2 0      &blt 5 TAB    &lt 6 ENTER  &lt_bspc 4 0
             >;
 
@@ -600,7 +609,7 @@
             bindings = <
   &kp Q        &kp W        &kp F         &kp P           &kp B         &kp J        &kp L               &kp U         &kp Y        &apos_dqt_win
   &hml LGUI A  &hml LALT R  &hml LCTRL S  &hml LSHFT T    &kp G         &kp M        &hmr RIGHT_SHIFT N  &hmr RCTRL E  &hmr LALT I  &hmr RGUI O
-  &lt 8 Z      &kp X        &kp C         &kp D           &kp V         &kp K        &kp H               &kp COMMA     &kp DOT      &kp NB_MINUS
+  &lt 8 Z      &kp X        &kp C         &kp D           &kp V         &kp K        &kp H               &kp COMMA     &kp DOT      &lt 8 NB_MINUS
                                           &lt_spcesc 3 0  &blt 5 TAB    &lt 7 ENTER  &lt_bspc 4 0
             >;
 
@@ -647,12 +656,6 @@
         };
 
         fn {
-            // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            //  F5 |  F6 | F7  | F8  |     |                |         |         |        |     |      |
-            //  F1 |  F2 | F3  | F4  | DEL |                |         |         |        |     |      |
-            //  F9 | F10 | F11 | F12 |     |                |   ,,    |   ,,    |        |     |      |
-            //         |      |     |      |     |      |           |         |      |
-
             bindings = <
   &kp F5    &kp F6    &kp F7     &kp F8      &none      &none  &kp F7  &kp F8  &kp F9  &kp F12
   &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHIFT  &kp DEL    &none  &kp F4  &kp F5  &kp F6  &kp F11
