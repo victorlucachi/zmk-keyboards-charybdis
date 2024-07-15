@@ -153,23 +153,7 @@
             bindings = <&kp NB_HASH>;
             key-positions = <23 26>;
         };
-
-        win_curl_l {
-            timeout-ms = <35>;
-            require-prior-idle-ms = <150>;
-            bindings = <&kp WNB_LBRC>;
-            key-positions = <2 1>;
-            layers = <1>;
-        };
-
-        win_curl_r {
-            timeout-ms = <35>;
-            require-prior-idle-ms = <150>;
-            bindings = <&kp WNB_RBRC>;
-            key-positions = <22 21>;
-            layers = <1>;
-        };
-
+        
         win_at {
             timeout-ms = <35>;
             require-prior-idle-ms = <150>;
