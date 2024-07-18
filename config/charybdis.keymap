@@ -302,7 +302,7 @@
     trackball_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
-        layers = <0 1 2 4 5 6 7 8 9>;
+        layers = <0 1 2 3 4 5 6 7>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
@@ -313,7 +313,7 @@
     trackball_listener2 {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball2>;
-        layers = <0 1 2 4 5 6 7 8 9>;
+        layers = <0 1 2 3 4 5 6 7>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
@@ -321,21 +321,21 @@
         scale-divisor = <1>;
     };
 
-    trackball_snipe_listener {
-        compatible = "zmk,input-behavior-listener";
-        device = <&vtrackball>;
-        layers = <3>;
-        evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_X>;
-        y-input-code = <INPUT_REL_Y>;
-        scale-multiplier = <1>;
-        scale-divisor = <16>;
-    };
+    // trackball_snipe_listener {
+    //     compatible = "zmk,input-behavior-listener";
+    //     device = <&vtrackball>;
+    //     layers = <3>;
+    //     evt-type = <INPUT_EV_REL>;
+    //     x-input-code = <INPUT_REL_X>;
+    //     y-input-code = <INPUT_REL_Y>;
+    //     scale-multiplier = <1>;
+    //     scale-divisor = <16>;
+    // };
 
     trackball_scroll_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
-        layers = <10>;
+        layers = <9>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_MISC>;
         y-input-code = <INPUT_REL_WHEEL>;
@@ -345,7 +345,7 @@
     trackball_scroll_listener2 {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball2>;
-        layers = <10>;
+        layers = <9>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_MISC>;
         y-input-code = <INPUT_REL_WHEEL>;
