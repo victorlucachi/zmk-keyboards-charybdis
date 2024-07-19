@@ -596,6 +596,8 @@
   &lt 7 Z      &kp X        &kp C         &kp D               &kp V         &kp K        &kp H                     &kp COMMA     &kp DOT      &lt 7 NB_MINUS
                                           &lt_spcesc 2 0      &blt 5 TAB    &lt 6 ENTER  &lt_bspc 4 0
             >;
+
+            label = "MAC";
         };
 
         win {
@@ -605,6 +607,8 @@
   &lt 7 Z      &kp X        &kp C         &kp D           &kp V         &kp K        &kp H               &kp COMMA     &kp DOT      &lt 7 NB_MINUS
                                           &lt_spcesc 3 0  &blt 5 TAB    &lt 6 ENTER  &lt_bspc 4 0
             >;
+
+            label = "WIN";
         };
 
         numbers {
@@ -614,6 +618,8 @@
   &kp LS(F9)    &kp LS(F10)    &kp LS(F11)  &kp LS(F12)  &none     &kp NB_PIPE  &kp N1  &kp N2  &kp N3  &kp NB_PLUS
                                             &none        &none     &kp DOT      &kp N0
             >;
+
+            label = "NUM";
         };
 
         num_win {
@@ -623,6 +629,8 @@
   &kp LS(F9)    &kp LS(F10)  &kp LS(F11)  &kp LS(F12)  &none     &kp WNB_PIPE  &kp N1  &kp N2  &kp N3  &kp WNB_PLUS
                                           &none        &none     &kp DOT       &kp N0
             >;
+
+            label = "NUW";
         };
 
         nav {
@@ -632,6 +640,8 @@
   &kp HOME  &kp PG_DN     &kp PG_UP     &kp END       &none      &none  &kp HOME         &none        &kp END      &none
                                         &kp ESC       &kp TAB    &none  &none
             >;
+
+            label = "NAV";
         };
 
         fn {
@@ -641,15 +651,19 @@
   &kp F9    &kp F10   &kp F11    &kp F12     &none      &none  &kp F1  &kp F2  &kp F3  &kp F10
                                  &none       &none      &none  &none
             >;
+
+            label = "FUN";
         };
 
-        music {
+        controls {
             bindings = <
   &kp Q       &kp W              &kp E       &kp NB_TILDE     &kp T         &kp Y   &kp U      &kp I      &kp O     &kp O
   &kp C_PREV  &kp C_VOLUME_DOWN  &kp C_MUTE  &kp C_VOLUME_UP  &kp C_NEXT    &kp G   &kp LSHFT  &kp LCTRL  &kp LALT  &kp LEFT_GUI
   &kp Z       &kp X              &kp C       &kp V            &kp B         &kp N   &kp M      &kp COMMA  &kp DOT   &kp MINUS
                                              &trans           &trans        &trans  &trans
             >;
+
+            label = "CON";
         };
 
         mouse {
@@ -659,6 +673,8 @@
   &none          &mo 9         &none      &none           &none        &none      &none            &none      &mo 9         &none
                                           &mkp LCLK       &mkp RCLK    &mkp RCLK  &mkp LCLK
             >;
+
+            label = "MOS";
         };
 
         FULL_SCROLL {
@@ -668,6 +684,8 @@
   &kp LCTRL  &trans    &kp LALT   &kp LCMD    &trans       &trans     &trans           &trans     &trans    &trans
                                   &mkp LCLK   &mkp RCLK    &mkp RCLK  &mkp LCLK
             >;
+
+            label = "SCR";
         };
 
         scrolly_moly {
@@ -677,6 +695,8 @@
   &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
                           &trans  &trans    &trans  &trans
             >;
+
+            label = "DRG";
         };
     };
 };
