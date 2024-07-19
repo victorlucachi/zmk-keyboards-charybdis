@@ -596,7 +596,7 @@
                                           &lt_spcesc 2 0      &blt 5 TAB    &lt 6 ENTER  &lt_bspc 4 0
             >;
 
-            display-name = "MAC"
+            display-name = "MAC";
             label = "MAC";
         };
 
@@ -608,7 +608,7 @@
                                           &lt_spcesc 3 0  &blt 5 TAB    &lt 6 ENTER  &lt_bspc 4 0
             >;
 
-            display-name = "WIN"
+            display-name = "WIN";
             label = "WIN";
         };
 
@@ -620,7 +620,7 @@
                                             &none        &none     &kp DOT      &kp N0
             >;
 
-            display-name = "NUM"
+            display-name = "NUM";
             label = "NUM";
         };
 
@@ -632,7 +632,7 @@
                                           &none        &none     &kp DOT       &kp N0
             >;
 
-            display-name = "NUM"
+            display-name = "NUM";
             label = "NUW";
         };
 
@@ -644,7 +644,7 @@
                                         &kp ESC       &kp TAB    &none  &none
             >;
 
-            display-name = "NAV"
+            display-name = "NAV";
             label = "NAV";
         };
 
@@ -656,7 +656,7 @@
                                  &none       &none      &none  &none
             >;
 
-            display-name = "FUN"
+            display-name = "FUN";
             label = "FUN";
         };
 
@@ -668,7 +668,7 @@
                                              &trans           &trans        &trans  &trans
             >;
 
-            display-name = "CON"
+            display-name = "CON";
             label = "CON";
         };
 
@@ -680,7 +680,7 @@
                                           &mkp LCLK       &mkp RCLK    &mkp RCLK  &mkp LCLK
             >;
 
-            display-name = "MOS"
+            display-name = "MOS";
             label = "MOS";
         };
 
@@ -692,7 +692,7 @@
                                   &mkp LCLK   &mkp RCLK    &mkp RCLK  &mkp LCLK
             >;
 
-            display-name = "FSC"
+            display-name = "FSC";
             label = "SCR";
         };
 
@@ -704,7 +704,7 @@
                           &trans  &trans    &trans  &trans
             >;
 
-            display-name = "VSC"
+            display-name = "VSC";
             label = "DRG";
         };
     };
