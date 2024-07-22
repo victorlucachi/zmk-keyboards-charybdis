@@ -588,10 +588,11 @@
 
     keymap {
         compatible = "zmk,keymap";
+
         default {
             bindings = <
   &kp Q        &kp W        &kp F         &kp P               &kp B         &kp J        &kp L                     &kp U         &kp Y        &apos_dqt
-  &hml LGUI A  &hml LALT R  &hml LCTRL S  &hml_shift LSHFT T  &kp G         &kp M        &hml_shift RIGHT_SHIFT N  &hmr RCTRL E  &hmr LALT I  &hmr RGUI O
+  &hml LGUI A  &hml LALT R  &hml LCTRL S  &hml_shift LSHFT T  &kp G         &kp M        &hmr_shift RIGHT_SHIFT N  &hmr RCTRL E  &hmr LALT I  &hmr RGUI O
   &lt 7 Z      &kp X        &kp C         &kp D               &kp V         &kp K        &kp H                     &kp COMMA     &kp DOT      &lt 7 NB_MINUS
                                           &lt_spcesc 2 0      &blt 5 TAB    &lt 6 ENTER  &lt_bspc 4 0
             >;
