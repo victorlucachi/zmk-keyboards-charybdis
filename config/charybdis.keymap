@@ -111,6 +111,13 @@
             layers = <0>;
         };
 
+        win_at {
+            timeout-ms = <35>;
+            require-prior-idle-ms = <150>;
+            bindings = <&kp WNB_AT_SIGN>;
+            key-positions = <2 7>;
+            layers = <1>;
+        };
         caps_word_combo {
             timeout-ms = <35>;
             require-prior-idle-ms = <150>;
@@ -130,6 +137,14 @@
             require-prior-idle-ms = <150>;
             bindings = <&kp NB_GRAVE>;
             key-positions = <1 8>;
+            layers = <0>;
+        };
+        grave_combo_win {
+            timeout-ms = <35>;
+            require-prior-idle-ms = <150>;
+            bindings = <&kp WNB_GRAVE>;
+            key-positions = <1 8>;
+            layers = <1>;
         };
 
         dollar_combo {
@@ -154,13 +169,6 @@
             key-positions = <23 26>;
         };
 
-        win_at {
-            timeout-ms = <35>;
-            require-prior-idle-ms = <150>;
-            bindings = <&kp WNB_AT_SIGN>;
-            key-positions = <2 7>;
-            layers = <1>;
-        };
 
         pipe_mac {
             timeout-ms = <35>;
@@ -199,8 +207,6 @@
             require-prior-idle-ms = <150>;
             bindings = <&kp NB_FSLH>;
             key-positions = <6 16>;
-
-            //global
         };
 
         dollar_win {
@@ -224,6 +230,34 @@
             require-prior-idle-ms = <150>;
             bindings = <&kp WNB_POUND_SIGN>;
             key-positions = <3 6>;
+            layers = <1>;
+        };
+        tilde_win {
+            timeout-ms = <35>;
+            require-prior-idle-ms = <150>;
+            bindings = <&kp WNB_TILDE>;
+            key-positions = <1 11>;
+            layers = <1>;
+        };
+        tilde_mac {
+            timeout-ms = <35>;
+            require-prior-idle-ms = <150>;
+            bindings = <&kp NB_TILDE>;
+            key-positions = <1 11>;
+            layers = <0>;
+        };
+        caret_mac {
+            timeout-ms = <35>;
+            require-prior-idle-ms = <150>;
+            bindings = <&kp NB_CARET>;
+            key-positions = <2 12>;
+            layers = <0>;
+        };
+        caret_win {
+            timeout-ms = <35>;
+            require-prior-idle-ms = <150>;
+            bindings = <&kp WNB_CARET>;
+            key-positions = <2 12>;
             layers = <1>;
         };
 
