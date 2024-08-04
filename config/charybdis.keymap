@@ -159,7 +159,7 @@
             timeout-ms = <35>;
             require-prior-idle-ms = <150>;
             bindings = <&kp NB_PRCNT>;
-            key-positions = <16 7>;
+            key-positions = <3 13>;
         };
 
         hash_combo {
@@ -232,33 +232,17 @@
             key-positions = <3 6>;
             layers = <1>;
         };
-        tilde_win {
+        tilde_combo {
             timeout-ms = <35>;
             require-prior-idle-ms = <150>;
             bindings = <&kp WNB_TILDE>;
             key-positions = <1 11>;
-            layers = <1>;
-        };
-        tilde_mac {
-            timeout-ms = <35>;
-            require-prior-idle-ms = <150>;
-            bindings = <&kp NB_TILDE>;
-            key-positions = <1 11>;
-            layers = <0>;
         };
         caret_mac {
             timeout-ms = <35>;
             require-prior-idle-ms = <150>;
-            bindings = <&kp NB_CARET>;
-            key-positions = <2 12>;
-            layers = <0>;
-        };
-        caret_win {
-            timeout-ms = <35>;
-            require-prior-idle-ms = <150>;
             bindings = <&kp WNB_CARET>;
             key-positions = <2 12>;
-            layers = <1>;
         };
 
         win_def {
@@ -691,7 +675,7 @@
                                  &none       &none      &none  &none
             >;
 
-            display-name = "FUN";
+            display-name = "FUNC";
             label = "FUN";
         };
 
@@ -715,8 +699,8 @@
                                           &mkp LCLK       &mkp RCLK    &mkp RCLK  &mkp LCLK
             >;
 
-            display-name = "MOS";
-            label = "MOS";
+            display-name = "MOUS";
+            label = "MOUS";
         };
 
         FULL_SCROLL {
@@ -727,7 +711,7 @@
                                   &mkp LCLK   &mkp RCLK    &mkp RCLK  &mkp LCLK
             >;
 
-            display-name = "FSC";
+            display-name = "SCROLL";
             label = "SCR";
         };
 
@@ -739,7 +723,7 @@
                           &trans  &trans    &trans  &trans
             >;
 
-            display-name = "VSC";
+            display-name = "VSCROLL";
             label = "DRG";
         };
     };
