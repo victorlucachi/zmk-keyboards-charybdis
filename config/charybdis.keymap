@@ -699,7 +699,7 @@
                                           &mkp LCLK       &mkp RCLK    &mkp RCLK  &mkp LCLK
             >;
 
-            display-name = "MOUS";
+            display-name = "MOUSE";
             label = "MOUS";
         };
 
@@ -711,7 +711,7 @@
                                   &mkp LCLK   &mkp RCLK    &mkp RCLK  &mkp LCLK
             >;
 
-            display-name = "SCROLL";
+            display-name = "FSCRL";
             label = "SCR";
         };
 
@@ -723,7 +723,7 @@
                           &trans  &trans    &trans  &trans
             >;
 
-            display-name = "VSCROLL";
+            display-name = "VSCRL";
             label = "DRG";
         };
     };
