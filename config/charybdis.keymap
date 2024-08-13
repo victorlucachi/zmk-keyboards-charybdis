@@ -25,6 +25,8 @@
     quick-release;
 };
 
+&lt { quick-tap-ms = <175>; };
+
 / {
     chosen { zmk,matrix_transform = &five_column_transform; };
 };
@@ -118,6 +120,7 @@
             key-positions = <2 7>;
             layers = <1>;
         };
+
         caps_word_combo {
             timeout-ms = <35>;
             require-prior-idle-ms = <150>;
@@ -139,6 +142,7 @@
             key-positions = <1 8>;
             layers = <0>;
         };
+
         grave_combo_win {
             timeout-ms = <35>;
             require-prior-idle-ms = <150>;
@@ -168,7 +172,6 @@
             bindings = <&kp NB_HASH>;
             key-positions = <23 26>;
         };
-
 
         pipe_mac {
             timeout-ms = <35>;
@@ -232,12 +235,14 @@
             key-positions = <3 6>;
             layers = <1>;
         };
+
         tilde_combo {
             timeout-ms = <35>;
             require-prior-idle-ms = <150>;
             bindings = <&kp WNB_TILDE>;
             key-positions = <1 11>;
         };
+
         caret_mac {
             timeout-ms = <35>;
             require-prior-idle-ms = <150>;
@@ -310,6 +315,13 @@
         scrl_l {
             bindings = <&mo 9>;
             key-positions = <11 21>;
+            timeout-ms = <35>;
+            require-prior-idle-ms = <150>;
+        };
+
+        bootloader_left {
+            bindings = <&bootloader>;
+            key-positions = <10 20>;
             timeout-ms = <35>;
             require-prior-idle-ms = <150>;
         };
@@ -386,7 +398,6 @@
             quick-tap-ms = <175>;                // repeat on tap-into-hold
             bindings = <&kp>, <&kp>;
 
-            require-prior-idle-ms = <150>;
             hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 33 34 31 32>;
             hold-trigger-on-release;
         };
@@ -399,7 +410,6 @@
             quick-tap-ms = <175>;                // repeat on tap-into-hold
             bindings = <&kp>, <&kp>;
 
-            require-prior-idle-ms = <150>;
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32 34 33>;
             hold-trigger-on-release;
         };
@@ -459,6 +469,7 @@
             bindings = <&mo>, <&bspc_del>;
 
             tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
         };
 
         shift_layer: shift_layer {
@@ -477,6 +488,7 @@
             bindings = <&mo>, <&spc_esc>;
 
             tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
         };
 
         apos_dqt: quot_doublequot {
@@ -580,7 +592,7 @@
         hml_shift: hml_shift {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
@@ -593,7 +605,7 @@
         hmr_shift: hmr_shift {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
