@@ -367,7 +367,7 @@
         device = <&vtrackball>;
         layers = <9>;
         evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_HWHEEL>;
+        x-input-code = <INPUT_REL_MISC>;
         y-input-code = <INPUT_REL_WHEEL>;
         bindings = <&ib_wheel_scaler 1 25>;
     };
@@ -592,7 +592,7 @@
         hml_shift: hml_shift {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
+            flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
@@ -605,7 +605,7 @@
         hmr_shift: hmr_shift {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
+            flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
@@ -699,8 +699,8 @@
                                              &trans           &trans        &trans  &trans
             >;
 
-            display-name = "CON";
-            label = "CON";
+            display-name = "MEDIA";
+            label = "MED";
         };
 
         mouse {
@@ -735,7 +735,7 @@
                           &trans  &trans    &trans  &trans
             >;
 
-            display-name = "VSCRL";
+            display-name = "SCRL";
             label = "DRG";
         };
     };
