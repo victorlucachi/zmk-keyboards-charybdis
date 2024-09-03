@@ -12,6 +12,10 @@
 #define Num 4
 #define Fun 5
 
+&soft_off {
+    hold-time-ms = <5000>;
+};
+
 &sl {
   release-after-ms = <250>;
 };
@@ -136,7 +140,7 @@
         Media {
             label = "Media";
             bindings = <
-            &trans     &trans     &trans       &trans           &trans        &trans     &trans           &trans       &trans     &trans
+            &soft_off     &trans     &trans       &trans           &trans        &trans     &trans           &trans       &trans     &soft_off
             &kp C_MUTE &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP     &kp C_NEXT    &kp C_PREV &kp C_VOL_DN     &kp C_VOL_UP &kp C_NEXT &kp C_MUTE
             &trans     &trans     &trans       &trans           &trans        &trans     &trans           &trans       &trans     &trans
                                     &trans       &kp C_PLAY_PAUSE &kp C_STOP    &kp C_STOP &kp C_PLAY_PAUSE
@@ -146,7 +150,7 @@
         Nav {
             label = "Navigation";
             bindings = <
-            &trans &trans &trans &trans &trans    &trans   &trans        &trans      &trans    &kp GRAVE
+            &trans &trans &trans &trans &trans    &trans   &trans        &trans      &soft_off    &kp GRAVE
             &trans &trans &trans &trans &trans    &kp LEFT &kp DOWN      &kp UP      &kp RIGHT &kp SQT
             &trans &trans &trans &trans &trans    &kp HOME &kp PAGE_DOWN &kp PAGE_UP &kp END   &kp BACKSLASH
                           &trans &trans &trans    &trans   &trans
@@ -156,7 +160,7 @@
         Sym {
             label = "Symbol";
             bindings = <
-            &kp EQUAL &kp AMPS &kp STAR  &kp PLUS  &kp LBRC    &kp RBRC &trans &trans &trans &kp TILDE
+            &kp EQUAL &kp AMPS &kp STAR  &kp PLUS  &kp LBRC    &kp RBRC &trans &trans &soft_off &kp TILDE
             &kp MINUS &kp DLLR &kp PRCNT &kp CARET &kp LPAR    &kp RPAR &trans &trans &trans &kp DQT
             &kp UNDER &kp EXCL &kp AT    &kp HASH  &kp LBKT    &kp RBKT &trans &trans &trans &kp PIPE
                                &trans    &trans    &trans      &trans &trans
