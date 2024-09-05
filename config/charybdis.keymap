@@ -111,9 +111,9 @@
         combo_gt { timeout-ms = <40>; key-positions = <4 14>; bindings = <&kp GT>; require-prior-idle-ms = <150>; };
 
         combo_lt { timeout-ms = <40>; key-positions = <5 15>; bindings = <&kp LT>; require-prior-idle-ms = <150>; };
-        combo_rbkt { timeout-ms = <40>; key-positions = <6 16>; bindings = <&kp RBKT>; require-prior-idle-ms = <150>; };
+        combo_rbrc { timeout-ms = <40>; key-positions = <6 16>; bindings = <&kp RBRC>; require-prior-idle-ms = <150>; };
         combo_rpar { timeout-ms = <40>; key-positions = <7 17>; bindings = <&kp RPAR>; require-prior-idle-ms = <150>; };
-        combo_rbrc { timeout-ms = <40>; key-positions = <8 18>; bindings = <&kp RBRC>; require-prior-idle-ms = <150>; };
+        combo_rbkt { timeout-ms = <40>; key-positions = <8 18>; bindings = <&kp RBKT>; require-prior-idle-ms = <150>; };
 
         combo_hl_leftclk { timeout-ms = <40>; key-positions = <11 12>; bindings = <&mkp LCLK>; require-prior-idle-ms = <150>; };
         combo_hl_middleclk { timeout-ms = <40>; key-positions = <21 22>; bindings = <&mkp RCLK>; require-prior-idle-ms = <150>; };
