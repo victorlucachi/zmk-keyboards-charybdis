@@ -325,6 +325,16 @@
             timeout-ms = <35>;
             require-prior-idle-ms = <150>;
         };
+
+        reset_left {
+            bindings = <&kp C_RESET>;
+            key-positions = <0 10>;
+        };
+
+        right_reset {
+            bindings = <&kp C_RESET>;
+            key-positions = <9 19>;
+        };
     };
 };
 
@@ -370,6 +380,7 @@
         y-input-code = <INPUT_REL_WHEEL>;
         bindings = <&ib_wheel_scaler 1 25>;
     };
+
     trackball_scroll_listener2 {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball2>;
@@ -380,7 +391,6 @@
         scale-multiplier = <1>;
         scale-divisor = <1>;
     };
-
 
     ib_wheel_scaler: ib_wheel_scaler {
         compatible = "zmk,input-behavior-scaler";
