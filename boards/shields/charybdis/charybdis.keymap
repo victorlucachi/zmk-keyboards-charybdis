@@ -1,0 +1,51 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/mouse.h>
+
+/ {
+    trackball_listener {
+        compatible = "zmk,input-listener";
+        device = <&vtrackball>;
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        Base {
+            bindings = <
+            &kp LGUI    &kp Q   &kp W   &kp E       &kp R       &kp T           &kp Y     &kp U       &kp I     &kp O       &kp P   &kp RGUI               
+            &kp RCTRL   &kp A   &kp S   &kp D       &kp F       &kp G           &kp H     &kp J       &kp K     &kp L    &kp SEMI  &kp RCTRL
+            &kp LSHIFT  &kp Z   &kp X   &kp C       &kp V       &kp B           &kp N     &kp M   &kp COMMA   &kp DOT &lt 7 SLASH &kp RSHIFT
+                                        &kp BSPC    &kp SPACE   &mo 1           &mo 2   &kp RET
+            >;
+        };
+
+        Lower {
+            bindings = <
+            &none    &none      &kp C_NEXT  &kp C_PP    &kp C_PREV  &none                      &kp LBKT     &kp N7  &kp N8  &kp N9      &kp RBKT    &none
+            &none    &kp LGUI   &kp LALT    &kp LCTRL   &kp LSHIFT  &none                   &kp KP_PLUS     &kp N4  &kp N5  &kp N6  &kp KP_MINUS    &none
+            &none    &none      &none       &none       &none       &bootloader         &kp KP_MULTIPLY     &kp N1  &kp N2  &kp N3  &kp KP_SLASH    &none
+                                            &none       &none       &trans                        &none     &trans
+            >;
+        };
+
+        Raise {
+            bindings = <
+            &none    &none      &none       &none       &none       &none            &none  &kp C_VOL_UP    &kp C_MUTE  &kp C_VOL_DN       &none    &none
+            &none    &kp LEFT   &kp UP      &kp DOWN    &kp RIGHT   &none            &none    &kp RSHIFT     &kp RCTRL      &kp RALT    &kp RGUI    &none
+            &none    &kp HOME   &kp PG_UP   &kp PG_DN   &kp END     &none            &none         &none         &none         &none       &none    &none
+                                            &trans      &trans      &none           &trans         &none
+            >;
+        };
+
+        Pointer {
+            bindings = <
+            &bootloader &none       &none       &none       &none       &none              &none        &none      &none      &none       &none    &bootloader
+            &none       &kp LGUI    &kp LALT    &kp LCTRL   &kp LSHIFT  &none              &none   &kp RSHIFT  &kp RCTRL   &kp RALT    &kp RGUI          &none
+            &none       &none       &none       &none       &none       &none              &none        &none      &none      &none       &none          &none
+                                    &mkp MB2    &mkp MB1    &mkp MB3                    &mkp MB3     &mkp MB1
+            >;
+        };
+    };
+};
