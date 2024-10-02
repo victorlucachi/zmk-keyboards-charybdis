@@ -34,7 +34,7 @@ manifest:
     path: config
 ```
 
-- Copy [the default keymap file](https://github.com/victorlucachi/zmk-keyboards-charybdis/blob/PR2477/boards/shields/charybdis/charybdis.keymap), create a new `config/charybdis.keymap` file, paste and edit to customize the keymap
+- Copy [the contents of the default keymap file](https://github.com/victorlucachi/zmk-keyboards-charybdis/blob/PR2477/boards/shields/charybdis/charybdis.keymap), create a new `config/charybdis.keymap` file, paste and edit to customize the keymap
 - Edit the `build.yml` file and add the Charybdis to the build list:
 
 ```
@@ -63,6 +63,12 @@ include:
 > Double check the names of the .uf2 files prior to copying them to your controller. Flashing the wrong reset firmware (eg: nice_nano_v2 reset flashed on a xiao controller) might brick your controller, requiring additional hardware in order to fix it.
 
 ## Misc
+
+#### Pointer Support
+
+This module is based on ZMK pointer [PR 2477](https://github.com/zmkfirmware/zmk/pull/2477), badjeff's [pmw3610 driver](https://github.com/badjeff/zmk-pmw3610-driver) and [peripheral input relay](https://github.com/badjeff/zmk-split-peripheral-input-relay). I highly suggest going over the documentation that is available in each of those repositories for a better understanding of their configuration options.
+
+#### ZMK Studio
 
 The shield is ZMK Studio enabled; ZMK Studio is in early alpha, the web gui (works only with the central half connected via USB; for BLE Studio you have to use one of the ZMK Studio native apps available [here](https://github.com/zmkfirmware/zmk-studio/actions)) is available [here](https://main.alpha.zmk.studio/).
 
