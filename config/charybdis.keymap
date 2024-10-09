@@ -706,7 +706,7 @@
   &kp Q       &kp W              &kp E       &kp NB_TILDE     &kp T         &kp Y   &kp U      &kp I      &kp O     &kp O
   &kp C_PREV  &kp C_VOLUME_DOWN  &kp C_MUTE  &kp C_VOLUME_UP  &kp C_NEXT    &kp G   &kp LSHFT  &kp LCTRL  &kp LALT  &kp LEFT_GUI
   &kp Z       &kp X              &kp C       &kp V            &kp B         &kp N   &kp M      &kp COMMA  &kp DOT   &kp MINUS
-                                             &trans           &trans        &trans  &trans
+                                             &kp C_PAUSE      &trans        &trans  &trans
             >;
 
             display-name = "MEDIA";
