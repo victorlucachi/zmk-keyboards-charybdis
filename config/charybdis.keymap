@@ -209,7 +209,7 @@
             timeout-ms = <35>;
             require-prior-idle-ms = <150>;
             bindings = <&kp NB_FSLH>;
-            key-positions = <6 16>;
+            key-positions = <2 12>;
         };
 
         dollar_win {
@@ -247,7 +247,7 @@
             timeout-ms = <35>;
             require-prior-idle-ms = <150>;
             bindings = <&kp WNB_CARET>;
-            key-positions = <2 12>;
+            key-positions = <6 16>;
         };
 
         win_def {
@@ -667,10 +667,10 @@
 
         num_win {
             bindings = <
-  &kp LS(F5)    &kp LG(L)    &kp LS(F7)   &kp LS(F8)   &none     &kp WNB_BSLH  &kp N7  &kp N8  &kp N9  &kp WNB_STAR
-  &kp LEFT_GUI  &kp LALT     &kp LCTRL    &kp LSHIFT   &tog 4    &kp WNB_FSLH  &kp N4  &kp N5  &kp N6  &kp WNB_EQUAL
-  &sys_reset    &kp LS(F10)  &kp LS(F11)  &kp LS(F12)  &none     &kp WNB_PIPE  &kp N1  &kp N2  &kp N3  &kp WNB_PLUS
-                                          &none        &none     &kp DOT       &kp N0
+  &kp LS(F5)    &kp LG(L)    &kp RIGHT_ALT  &kp LS(F8)  &none     &kp WNB_BSLH  &kp N7  &kp N8  &kp N9  &kp WNB_STAR
+  &kp LEFT_GUI  &kp LALT     &kp LCTRL      &kp LSHIFT  &tog 4    &kp WNB_FSLH  &kp N4  &kp N5  &kp N6  &kp WNB_EQUAL
+  &sys_reset    &kp LS(F10)  &kp LS(F11)    &kp RALT    &none     &kp WNB_PIPE  &kp N1  &kp N2  &kp N3  &kp WNB_PLUS
+                                            &none       &none     &kp DOT       &kp N0
             >;
 
             display-name = "NUM";
