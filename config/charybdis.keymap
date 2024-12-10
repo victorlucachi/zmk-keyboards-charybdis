@@ -19,53 +19,17 @@
 / {
     trackball_listener {
         compatible = "zmk,input-listener";
-        device = <&vtrackball>;
+        device = <&trackball_split>;
 
         snipe {
-            layers = <Button>;
-            input-processors = <&xy_scaler 1 3>;
+            layers = <MSE>;
+            input-processors = <&zip_xy_scaler 1 3>;
         };
 
         scroll {
-            layers = <Nav>;
-            input-processors = <&xy_invert (INPUT_TRANSFORM_Y_INVERT)>, <&xy_scaler 1 3>, <&x_scaler 0 1>, <&mouse_to_wheel_mapper>;
+            layers = <NAV>;
+            input-processors = <&zip_xy_scaler 1 3>, <&zip_xy_to_scroll_mapper>, <&zip_scroll_transform (INPUT_TRANSFORM_Y_INVERT)>;
         };
-    };
-
-    xy_scaler: xy_scaler {
-        compatible = "zmk,input-processor-scaler";
-        #input-processor-cells = <2>;
-        type = <INPUT_EV_REL>;
-        codes = <INPUT_REL_X>, <INPUT_REL_Y>;
-    };
-
-    x_scaler: x_scaler {
-        compatible = "zmk,input-processor-scaler";
-        #input-processor-cells = <2>;
-        type = <INPUT_EV_REL>;
-        codes = <INPUT_REL_X>;
-    };
-
-    y_scaler: y_scaler {
-        compatible = "zmk,input-processor-scaler";
-        #input-processor-cells = <2>;
-        type = <INPUT_EV_REL>;
-        codes = <INPUT_REL_Y>;
-    };
-
-    xy_invert: xy_invert {
-        compatible = "zmk,input-processor-transform";
-        #input-processor-cells = <1>;
-        type = <INPUT_EV_REL>;
-        x-codes = <INPUT_REL_X>, <INPUT_REL_WHEEL>;
-        y-codes = <INPUT_REL_Y>, <INPUT_REL_HWHEEL>;
-    };
-
-    mouse_to_wheel_mapper: mouse_to_wheel_mapper {
-        compatible = "zmk,input-processor-code-mapper";
-        #input-processor-cells = <0>;
-        type = <INPUT_EV_REL>;
-        map = <INPUT_REL_X INPUT_REL_MISC>, <INPUT_REL_Y INPUT_REL_WHEEL>;
     };
 
     behaviors {

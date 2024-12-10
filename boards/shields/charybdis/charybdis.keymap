@@ -6,7 +6,7 @@
 / {
     trackball_listener {
         compatible = "zmk,input-listener";
-        device = <&vtrackball>;
+        device = <&trackball_split>;
     };
 
     keymap {
