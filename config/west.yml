@@ -2,6 +2,8 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/petejohanson
+    - name: badjeff
+      url-base: https://github.com/badjeff
     - name: englmaxi
       url-base: https://github.com/englmaxi
     # Additional modules containing boards/shields/custom code can be listed here as well
