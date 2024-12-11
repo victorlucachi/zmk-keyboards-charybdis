@@ -14,12 +14,6 @@ manifest:
     - name: zmk-pmw3610-driver
       remote: badjeff
       revision: main
-    - name: zmk-split-peripheral-input-relay
-      remote: badjeff
-      revision: main
-    - name: zmk-input-behavior-listener
-      remote: badjeff
-      revision: main
     - name: zmk-dongle-display
       remote: englmaxi
       revision: main
