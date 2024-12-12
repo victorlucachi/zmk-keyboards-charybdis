@@ -4,31 +4,26 @@
 
 - Open the following [link](https://github.com/zmkfirmware/unified-zmk-config-template), click the green `Use this template` button in the upper right corner, and create a new repository
 - Navigate to your newly created repository
-- Edit the `config/west.yml` file and add the Charybdis module as well as the pmw3610 driver and peripheral input module, ZMK branch for pointer input:
+- Edit the `config/west.yml` file and add the Charybdis module as well as the pmw3610 driver:
 
 ```
 manifest:
   remotes:
   - name: zmkfirmware
     url-base: https://github.com/zmkfirmware
-  - name: petejohanson
-    url-base: https://github.com/petejohanson
   - name: badjeff
     url-base: https://github.com/badjeff
   projects:
   - name: zmk
-    remote: petejohanson
-    revision: feat/pointers-with-input-processors
+    remote: zmkfirmware
+    revision: main
     import: app/west.yml
   - name: zmk-pmw3610-driver
     remote: badjeff
     revision: main
-  - name: zmk-split-peripheral-input-relay
-    remote: badjeff
-    revision: main
   - name: zmk-keyboards-charybdis
-    url: https://github.com/victorlucachi/zmk-keyboards-charybdis
-    revision: PR2477
+    url: zmk-keyboards-charybdis
+    revision: develop
     path: modules/zmk-keyboards-charybdis
   self:
     path: config
@@ -63,10 +58,6 @@ include:
 > Double check the names of the .uf2 files prior to copying them to your controller. Flashing the wrong reset firmware (eg: nice_nano_v2 reset flashed on a xiao controller) might brick your controller, requiring additional hardware in order to fix it.
 
 ## Misc
-
-#### Pointer Support
-
-This module is based on ZMK pointer [PR 2477](https://github.com/zmkfirmware/zmk/pull/2477), badjeff's [pmw3610 driver](https://github.com/badjeff/zmk-pmw3610-driver) and [peripheral input relay](https://github.com/badjeff/zmk-split-peripheral-input-relay). I highly suggest going over the documentation that is available in each of those repositories for a better understanding of their configuration options.
 
 #### ZMK Studio
 
