@@ -22,17 +22,23 @@
 		compatible = "zmk,virtual-input";
 	};
 
+
+{	
+    split_inputs {
+        #address-cells = <1>;
+        #size-cells = <0>;
+    }
 	input_relay_config_trackball {
 		compatible = "zmk,input-split";
 		device = <&vtrackball>;
-		relay-channel = <102>;
+		reg = <0>;
 	};
-
-	input_relay_config_trackball2 {
+    input_relay_config_trackball2 {
 		compatible = "zmk,input-split";
 		device = <&vtrackball2>;
-		relay-channel = <103>;
+		reg = <1>;
 	};
+    }
 };
 &pro_micro_i2c {
     status = "okay";
