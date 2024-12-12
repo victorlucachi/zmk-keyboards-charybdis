@@ -23,13 +23,13 @@
 	};
 
 	input_relay_config_trackball {
-		compatible = "zmk,split-peripheral-input-relay";
+		compatible = "zmk,input-split";
 		device = <&vtrackball>;
 		relay-channel = <102>;
 	};
 
 	input_relay_config_trackball2 {
-		compatible = "zmk,split-peripheral-input-relay";
+		compatible = "zmk,input-split";
 		device = <&vtrackball2>;
 		relay-channel = <103>;
 	};
