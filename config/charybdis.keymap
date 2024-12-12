@@ -346,18 +346,15 @@
         compatible = "zmk,input-listener";
         device = <&vtrackball>;
         input-processors = <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
-             {
-        layers = <0 1 2 3 4 5 6 7>;
-        };
+        //layers = <0 1 2 3 4 5 6 7>;
     };
 
     trackball_listener2 {
         compatible = "zmk,input-listener";
         device = <&vtrackball2>;
         input-processors = <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
-        {
-        layers = <0 1 2 3 4 5 6 7>;
-        };
+        //layers = <0 1 2 3 4 5 6 7>;
+        
     };
 
     // trackball_snipe_listener {
@@ -375,14 +372,14 @@
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
         input-processors = <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
-        {layers = <9>;};
+        //layers = <9>;
     };
 
     trackball_scroll_listener2 {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball2>;
         input-processors = <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
-        {layers = <9>;};
+        //layers = <9>;
     };
 
     behaviors {
