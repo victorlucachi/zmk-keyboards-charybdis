@@ -1,4 +1,5 @@
 #include "charybdis.dtsi"
+#include "split_input_common.dtsi"
 
 / {
     chosen {
@@ -14,47 +15,9 @@
     };
 };
 
-/ {
-	vtrackball: virtual_input_trackball {
-		compatible = "zmk,virtual-input";
-	};
-	vtrackball2: virtual_input_trackball2 {
-		compatible = "zmk,virtual-input";
-	};
-
-
-{	
-    split_inputs {
-        #address-cells = <1>;
-        #size-cells = <0>;
-    }
-	input_relay_config_trackball {
-		compatible = "zmk,input-split";
-		device = <&vtrackball>;
-		reg = <0>;
-	};
-    input_relay_config_trackball2 {
-		compatible = "zmk,input-split";
-		device = <&vtrackball2>;
-		reg = <1>;
-	};
-    }
-};
-&pro_micro_i2c {
+&trackball_listener {
     status = "okay";
-    
-    oled: ssd1306@3c {
-        compatible = "sinowealth,sh1106";
-        reg = <0x3c>;
-        width = <128>;
-        height = <64>;
-        segment-offset = <2>;
-        page-offset = <0>;
-        display-offset = <0>;
-        multiplex-ratio = <63>;
-        segment-remap;
-        com-invdir;
-        inversion-on;
-        prechargep = <0x22>;
-    };
+};
+&trackball_listener2 {
+    status = "okay";
 };

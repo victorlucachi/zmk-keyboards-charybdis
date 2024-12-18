@@ -1,0 +1,52 @@
+#include <dt-bindings/zmk/input_transform.h>
+#include <input/processors.dtsi>
+
+#define WIN 1
+#define SYMBOLS 2
+#define NUMBERS 3
+#define NAV 4
+#define FUNCTION 5
+#define BLUETOOTH 6
+#define MOUSE 7
+#define CLICK 8
+#define SCRL 9
+#define BIRO 10
+
+/ {
+  split_inputs {
+    #address-cells = <1>;
+    #size-cells = <0>;
+
+    trackball_split: trackball_split@0 {
+      compatible = "zmk,input-split";
+      reg = <0>;
+    };
+    trackball_split2: trackball_split2@0 {
+      compatible = "zmk,input-split";
+      reg = <0>;
+    };
+  };
+
+  trackball_listener: trackball_listener {
+    compatible = "zmk,input-listener";
+    status = "disabled";
+    device = <&trackball_split>;
+
+    scroll {
+      layers = <SCRL>;
+      input-processors = <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>, <&zip_xy_scaler 1 3>, <&zip_xy_to_scroll_mapper>;
+    };
+
+  };
+  trackball_listener2: trackball_listener2 {
+    compatible = "zmk,input-listener";
+    status = "disabled";
+    device = <&trackball_split2>;
+
+    scroll {
+      layers = <SCRL>;
+      input-processors = <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>, <&zip_xy_scaler 1 3>, <&zip_xy_to_scroll_mapper>;
+    };
+
+  };
+};
