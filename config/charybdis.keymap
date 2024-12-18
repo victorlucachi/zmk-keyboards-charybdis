@@ -565,14 +565,6 @@
             label = "HMR_SHIFT";
         };
     };
-    trackball_listener {
-        compatible = "zmk,input-listener";
-        device = <&vtrackball>;
-    };
-    trackball_listener2 {
-        compatible = "zmk,input-listener";
-        device = <&vtrackball2>;
-    };
 
     keymap {
         compatible = "zmk,keymap";
