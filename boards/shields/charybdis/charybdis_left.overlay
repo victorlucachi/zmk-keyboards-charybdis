@@ -25,3 +25,6 @@
 &trackball_split2 {
 	device = <&trackball2>;
 };
+&trackball_split { 
+	status = "disabled"; 
+};

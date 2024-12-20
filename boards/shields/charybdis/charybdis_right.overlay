@@ -30,6 +30,9 @@
 		;
 };
 
-&trackball_split {
-	device = <&trackball>;
+&trackball_split { 
+	device = <&trackball>; 
+	};
+&trackball_split2 { 
+	status = "disabled"; 
 };
