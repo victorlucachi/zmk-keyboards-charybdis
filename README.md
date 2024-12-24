@@ -29,7 +29,7 @@ manifest:
     path: config
 ```
 
-- Copy [the contents of the default keymap file](https://github.com/victorlucachi/zmk-keyboards-charybdis/blob/PR2477/boards/shields/charybdis/charybdis.keymap), create a new `config/charybdis.keymap` file, paste and edit to customize the keymap
+- Copy [the contents of the default keymap file](boards/shields/charybdis/charybdis.keymap), create a new `config/charybdis.keymap` file, paste and edit to customize the keymap
 - Edit the `build.yml` file and add the Charybdis to the build list:
 
 ```
