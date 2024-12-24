@@ -23,7 +23,7 @@ manifest:
     revision: main
   - name: zmk-keyboards-charybdis
     url: https://github.com/victorlucachi/zmk-keyboards-charybdis
-    revision: develop
+    revision: main
     path: modules/zmk-keyboards-charybdis
   self:
     path: config
